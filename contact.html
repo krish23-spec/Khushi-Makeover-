@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khushi Makeover | Contact - Book Your Appointment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav-container">
+      <div class="logo">
+        <h1>Khushi Makeover</h1>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="navbar" id="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero contact-hero">
+      <div class="container">
+        <h1>Get In Touch</h1>
+        <p>Let's create magic together</p>
+      </div>
+    </section>
+
+    <section class="contact-main section-pad">
+      <div class="container contact-wrapper">
+        <div class="contact-info">
+          <span class="section-subtitle">Reach Us</span>
+          <h2 class="section-title">Book Your Appointment</h2>
+          <p>Questions? We'd love to hear from you. Send us a message and we'll respond within 24 hours.</p>
+          <ul class="contact-details">
+            <li><i class="fas fa-phone-alt"></i> +1 (800) 456-7890</li>
+            <li><i class="fas fa-envelope"></i> hello@khushimakeover.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Beauty Lane, Beverly Hills, CA</li>
+          </ul>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="input-group">
+              <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="input-group">
+              <input type="email" id="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-group">
+              <input type="tel" id="phone" placeholder="Phone Number">
+            </div>
+            <div class="input-group">
+              <textarea id="message" rows="4" placeholder="Tell us about your beauty needs..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary full-width">Send Message <i class="fas fa-paper-plane"></i></button>
+            <p id="formFeedback" class="form-feedback"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; 2025 Khushi Makeover — Timeless Beauty, Modern Artistry.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

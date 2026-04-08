@@ -1,0 +1,282 @@
+/* Tablet - 992px and below */
+@media (max-width: 992px) {
+  .container {
+    padding: 0 1.8rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .hero-brand {
+    font-size: 3rem;
+  }
+  
+  .about-grid,
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .about-image {
+    order: -1;
+  }
+  
+  .about-image img {
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
+  .page-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .page-hero {
+    padding: 7rem 0 3rem;
+  }
+}
+
+/* Mobile - 768px and below */
+@media (max-width: 768px) {
+  .mobile-toggle {
+    display: block;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 80%;
+    max-width: 300px;
+    background: #fffefc;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 2rem;
+    border-radius: 0 20px 20px 0;
+    transition: left 0.3s ease;
+    z-index: 999;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+  
+  .navbar.active {
+    left: 0;
+  }
+  
+  .navbar ul {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  .navbar a {
+    font-size: 1.1rem;
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  .logo h1
+
+  {
+    font-size: 1rem;
+  }
+  
+  .section-pad {
+    padding: 3rem 0;
+  }
+  
+  .hero {
+    min-height: 80vh;
+  }
+  
+  .hero-brand {
+    font-size: 2.2rem;
+  }
+  
+  .hero-tagline {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+  }
+  
+  .hero-desc {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+  
+  .btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+    margin: 0.3rem;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+  }
+  
+  .services-grid,
+  .features-grid,
+  .team-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  
+  .service-card {
+    padding: 1.5rem;
+  }
+  
+  .gallery-item img {
+    height: 280px;
+  }
+  
+  .mission-vision {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  .contact-details li {
+    font-size: 0.9rem;
+  }
+  
+  .team-card img {
+    height: 220px;
+  }
+  
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .page-hero p {
+    font-size: 0.9rem;
+  }
+  
+  .packages-info {
+    font-size: 0.85rem;
+    padding: 0.8rem;
+  }
+  
+  .lightbox-img {
+    max-width: 90%;
+    max-height: 60%;
+  }
+  
+  .close-lightbox {
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+  }
+}
+
+/* Small Mobile - 480px and below */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .hero-brand {
+    font-size: 1.8rem;
+  }
+  
+  .hero-tagline {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+  }
+  
+  .hero-desc {
+    font-size: 0.85rem;
+  }
+  
+  .section-title {
+    font-size: 1.4rem;
+  }
+  
+  .section-subtitle {
+    font-size: 0.7rem;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+  
+  .service-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .price {
+    font-size: 1.2rem;
+  }
+  
+  .gallery-item img {
+    height: 240px;
+  }
+  
+  .contact-details li {
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+  }
+  
+  .social-icons a {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+  
+  input, textarea {
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .feature-item, .team-card {
+    padding: 1.2rem;
+  }
+  
+  .footer {
+    padding: 1.2rem 0;
+    font-size: 0.8rem;
+  }
+  
+  .page-hero {
+    padding: 6rem 0 2rem;
+  }
+  
+  .page-hero h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Landscape mode for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    min-height: 100vh;
+  }
+  
+  .navbar {
+    height: calc(100vh - 70px);
+  }
+  
+  .gallery-item img {
+    height: 200px;
+  }
+  
+  .section-pad {
+    padding: 2rem 0;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 360px) {
+  .hero-brand {
+    font-size: 1.5rem;
+  }
+  
+  .btn {
+    display: block;
+    width: 90%;
+    margin: 0.5rem auto;
+    text-align: center;
+  }
+  
+  .hero-content .btn {
+    display: block;
+    width: 80%;
+  }
+}
