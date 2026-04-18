@@ -113,7 +113,7 @@
   
   .services-grid,
   .features-grid,
-  .team-grid,
+  /* .team-grid, */
   .gallery-grid {
     grid-template-columns: 1fr;
     gap: 1.2rem;
@@ -278,5 +278,141 @@
   .hero-content .btn {
     display: block;
     width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .gallery-item {
+    border-radius: 16px;
+  }
+  
+  .gallery-item img {
+    aspect-ratio: 4 / 5;
+  }
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* ========================================
+   TEAM CARDS - SIMPLE PERFECT RESPONSIVE
+   Photos Puri Dikhni Chahiye - No Cut, No Stretch
+   ======================================== */
+
+/* Base Style - Bilkul Simple */
+.team-card img {
+  width: 100%;
+  min-height: 280px;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+/* Tablet (992px and below) */
+@media (max-width: 992px) {
+  .team-card {
+    padding: 1.3rem;
+  }
+  
+  .team-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile (768px and below) */
+@media (max-width: 768px) {
+  .team-card {
+    padding: 1.2rem;
+  }
+  
+  .team-card h3 {
+    font-size: 1.25rem;
+  }
+  
+  .team-card .team-bio {
+    font-size: 0.8rem;
+  }
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+  .team-card {
+    padding: 1rem;
+  }
+  
+  .team-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .team-card p {
+    font-size: 0.85rem;
+  }
+  
+  .team-social a {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Extra Small (375px and below) */
+@media (max-width: 375px) {
+  .team-card {
+    padding: 0.9rem;
+  }
+  
+  .team-card h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Very Small (360px and below) */
+@media (max-width: 360px) {
+  .team-card {
+    padding: 0.8rem;
+  }
+}
+
+/* Landscape Mode for Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .team-card {
+    padding: 0.8rem;
+  }
+  
+  .team-card h3 {
+    font-size: 1rem;
+  }
+  
+  .team-bio {
+    display: none;
+  }
+}
+
+/* Large Desktop (1600px+) */
+@media (min-width: 1600px) {
+  .team-card {
+    padding: 2rem;
+  }
+  
+  .team-card h3 {
+    font-size: 1.6rem;
   }
 }

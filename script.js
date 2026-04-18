@@ -33,12 +33,15 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Gallery images for gallery page
   const galleryImages = [
-    "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1556228578-8c89e6adf883?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1520853504280-249b72dc947c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    "/clients_transformation/467280857_18252313954278553_5524067425918791421_n.jpg",
+    "/clients_transformation/467906908_18252313525278553_1019929937419045446_n.jpg",
+    "/clients_transformation/468184008_18252676915278553_2432480942652445263_n.jpg",
+    "/clients_transformation/468298476_18252677386278553_6827129010600524136_n.jpg",
+    "/clients_transformation/468610283_18253112470278553_7270588592594574775_n.jpg",
+    "/clients_transformation/468789156_18253112416278553_6912108494378747854_n.jpg",
+    "/clients_transformation/620978306_18304232791278553_5452683520020795773_n.jpg",
+    "/clients_transformation/623549317_18094089911301958_926039516781496309_n.webp",
+    "/clients_transformation/654444375_17994823859922235_3344556088925865332_n.webp"
   ];
   
   const galleryGrid = document.getElementById('galleryGrid');
@@ -91,42 +94,42 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   // Contact form handling
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('name')?.value.trim();
-      const email = document.getElementById('email')?.value.trim();
-      const message = document.getElementById('message')?.value.trim();
-      const feedback = document.getElementById('formFeedback');
+  // const contactForm = document.getElementById('contactForm');
+  // if (contactForm) {
+  //   contactForm.addEventListener('submit', (e) => {
+  //     e.preventDefault();
+  //     const name = document.getElementById('name')?.value.trim();
+  //     const email = document.getElementById('email')?.value.trim();
+  //     const message = document.getElementById('message')?.value.trim();
+  //     const feedback = document.getElementById('formFeedback');
       
-      if (!name || !email || !message) {
-        if (feedback) {
-          feedback.textContent = '❌ Please fill all required fields.';
-          feedback.style.color = '#b1624b';
-        }
-        return;
-      }
+  //     if (!name || !email || !message) {
+  //       if (feedback) {
+  //         feedback.textContent = '❌ Please fill all required fields.';
+  //         feedback.style.color = '#b1624b';
+  //       }
+  //       return;
+  //     }
       
-      if (!email.includes('@') || !email.includes('.')) {
-        if (feedback) {
-          feedback.textContent = '❌ Please enter a valid email address.';
-          feedback.style.color = '#b1624b';
-        }
-        return;
-      }
+  //     if (!email.includes('@') || !email.includes('.')) {
+  //       if (feedback) {
+  //         feedback.textContent = '❌ Please enter a valid email address.';
+  //         feedback.style.color = '#b1624b';
+  //       }
+  //       return;
+  //     }
       
-      if (feedback) {
-        feedback.textContent = `✨ Thank you ${name}! We'll contact you soon. ✨`;
-        feedback.style.color = '#6f8f6b';
-      }
-      contactForm.reset();
+  //     if (feedback) {
+  //       feedback.textContent = `✨ Thank you ${name}! We'll contact you soon. ✨`;
+  //       feedback.style.color = '#6f8f6b';
+  //     }
+  //     contactForm.reset();
       
-      setTimeout(() => {
-        if (feedback) feedback.textContent = '';
-      }, 4000);
-    });
-  }
+  //     setTimeout(() => {
+  //       if (feedback) feedback.textContent = '';
+  //     }, 4000);
+  //   });
+  // }
   
   // Scroll animations
   const animatedElements = document.querySelectorAll('.service-card, .gallery-item, .feature-item, .team-card, .about-image, .mv-block');
@@ -148,4 +151,42 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.1 });
   
   animatedElements.forEach(el => observer.observe(el));
+});
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // Form se values le lo
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var phone = document.getElementById('phone').value;
+  var message = document.getElementById('message').value;
+  
+  // WhatsApp number (Indian number - 9716888850)
+  var whatsappNumber = '919716888850';  // Country code 91 ke saath
+  
+  // Message format karo
+  var whatsappMessage = `*New Enquiry from Khushi Makeover Website*%0A%0A
+*Name:* ${name}%0A
+*Email:* ${email}%0A
+*Phone:* ${phone}%0A
+*Message:* ${message}%0A%0A
+_This message was sent from website contact form_`;
+  
+  // WhatsApp link banao
+  var whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  
+  // Naya tab mein WhatsApp kholo
+  window.open(whatsappURL, '_blank');
+  
+  // Feedback dikhao
+  var feedback = document.getElementById('formFeedback');
+  feedback.innerHTML = '✨ Redirecting to WhatsApp... Please send the message ✨';
+  feedback.style.color = '#d9b8a4';
+  
+  // Form reset karo
+  setTimeout(function() {
+    document.getElementById('contactForm').reset();
+    feedback.innerHTML = '';
+  }, 3000);
 });
